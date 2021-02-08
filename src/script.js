@@ -74,7 +74,7 @@ $(document).ready(function() {
 			timeout: 2000
 		})
 			.then((res) => {
-				if (res.status >= 400) internals.removeClass('tile-disabled');
+				if (res.status < 400 && res.status >= 200) internals.removeClass('tile-disabled');
 				else internals.addClass('tile-disabled');
 			})
 			.catch((err) => {
