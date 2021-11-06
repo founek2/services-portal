@@ -64,8 +64,8 @@ $(document).ready(function () {
     })(jQuery);
 
     function internalChecker($) {
-        var internals = $('.link-internal-test');
-        var url = internals.first().attr('href');
+        var internals = $('.link-internal');
+        var url = $('.link-internal-test').first().attr('href');
         fetchWithTimeout(url, {
             // method: "GET",
             timeout: 2000,
