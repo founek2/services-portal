@@ -5,23 +5,23 @@
 $(document).ready(function () {
     (function ($) {
         var speed = 2000;
-        var container = $(".display-animation");
+        var container = $('.display-animation');
         container.each(function () {
             var elements = $(this).children();
             elements.each(function () {
-                console.log("element", this);
+                console.log('element', this);
                 var elementOffset = $(this).offset();
                 var offset = elementOffset.left * 0.8 + elementOffset.top;
                 var delay = parseFloat(offset / speed).toFixed(2);
                 $(this)
-                    .css("-webkit-animation-delay", delay + "s")
-                    .css("-o-animation-delay", delay + "s")
-                    .css("animation-delay", delay + "s")
-                    .addClass("animated");
+                    .css('-webkit-animation-delay', delay + 's')
+                    .css('-o-animation-delay', delay + 's')
+                    .css('animation-delay', delay + 's')
+                    .addClass('animated');
             });
         });
     })(jQuery);
-    console.log(jQuery);
+
     /**
      * Created by Kupletsky Sergey on 04.09.14.
      *
@@ -32,18 +32,18 @@ $(document).ready(function () {
      */
 
     (function ($) {
-        $(".ripple-effect").click(function (e) {
+        $('.ripple-effect').click(function (e) {
             var rippler = $(this);
 
             // create .ink element if it doesn't exist
-            if (rippler.find(".ink").length == 0) {
+            if (rippler.find('.ink').length == 0) {
                 rippler.append("<span class='ink'></span>");
             }
 
-            var ink = rippler.find(".ink");
+            var ink = rippler.find('.ink');
 
             // prevent quick double clicks
-            ink.removeClass("animate");
+            ink.removeClass('animate');
 
             // set .ink diametr
             if (!ink.height() && !ink.width()) {
@@ -57,29 +57,30 @@ $(document).ready(function () {
 
             // set .ink position and add class .animate
             ink.css({
-                top: y + "px",
-                left: x + "px",
-            }).addClass("animate");
+                top: y + 'px',
+                left: x + 'px',
+            }).addClass('animate');
         });
     })(jQuery);
 
     function internalChecker($) {
-        var internals = $(".link-internal");
-        var url = internals.first().attr("href");
+        var internals = $('.link-internal-test');
+        var url = internals.first().attr('href');
         fetchWithTimeout(url, {
             // method: "GET",
             timeout: 2000,
-            mode: "no-cors",
+            mode: 'no-cors',
         })
             .then((res) => {
-                console.log("Status", res.status);
+                console.log('Status', res.status);
                 if ((res.status < 400 && res.status >= 200) || res.status === 0)
-                    internals.removeClass("tile-disabled");
-                else internals.addClass("tile-disabled");
+                    internals.removeClass('tile-disabled');
+                else internals.addClass('tile-disabled');
             })
             .catch((err) => {
-                console.log("err", err);
-                internals.addClass("tile-disabled");
+                console.log('err', err, err.name, err.message);
+                if (err.name !== 'TypeError')
+                    internals.addClass('tile-disabled');
             });
     }
 
