@@ -9,7 +9,6 @@ $(document).ready(function () {
         container.each(function () {
             var elements = $(this).children();
             elements.each(function () {
-                console.log('element', this);
                 var elementOffset = $(this).offset();
                 var offset = elementOffset.left * 0.8 + elementOffset.top;
                 var delay = parseFloat(offset / speed).toFixed(2);
@@ -72,7 +71,6 @@ $(document).ready(function () {
             mode: 'no-cors',
         })
             .then((res) => {
-                console.log('Status', res.status);
                 if ((res.status < 400 && res.status >= 200) || res.status === 0)
                     internals.removeClass('tile-disabled');
                 else internals.addClass('tile-disabled');
