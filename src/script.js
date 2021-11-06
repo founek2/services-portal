@@ -78,9 +78,9 @@ $(document).ready(function () {
                 else internals.addClass('tile-disabled');
             })
             .catch((err) => {
-                console.log('err', err, err.name, err.message);
-                if (err.name !== 'TypeError')
-                    internals.addClass('tile-disabled');
+                if (err.name === 'TypeError')
+                    internals.removeClass('tile-disabled');
+                else internals.addClass('tile-disabled');
             });
     }
 
