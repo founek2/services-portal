@@ -4,13 +4,14 @@
     <title>Služby rozcestník</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="dashboard display-animation" style="margin: 0 auto; width: 1130px;">
+    <div class="dashboard display-animation" style="margin: 0 auto; max-width: 1130px;">
         <a class="tile tile-lg tile-light-blue ripple-effect" href="https://nextcloud.iotplatforma.cloud">
             <span class="content-wrapper">
                 <span class="tile-content">
@@ -56,8 +57,13 @@
         <a class="tile tile-lg tile-amber ripple-effect" href="https://docker.iotplatforma.cloud">
             <span class="content-wrapper">
                 <span class="tile-content">
-                    <span class="tile-img tile-img-bg"
-                        style="background-image: url(img/portainerBig.png); background-size: contain; background-position: center;"></span>
+                    <span class="tile-img"
+                        style="background-image: url(img/portainerBig.png);"></span>
+@media screen and (max-device-width: 849px){
+  .dashboard {
+  	width: 570px;
+  }
+}
                     <span class="tile-holder tile-holder-sm">
                         <span class="title">Správa kontejnerů</span>
                     </span>
@@ -98,7 +104,7 @@
             <span class="content-wrapper">
                 <span class="tile-content">
                     <span class="tile-img"
-                        style="background-image: url(img/SonarrV3.png); background-size: contain; background-position: center;"></span>
+                        style="background-image: url(img/SonarrV3.png);"></span>
                     <span class="tile-holder tile-holder-sm">
                         <span class="title">Stahování filmů</span>
                     </span>
@@ -119,8 +125,8 @@
         <a class="tile tile-lg tile-purple ripple-effect" href="https://python.iotplatforma.cloud">
             <span class="content-wrapper">
                 <span class="tile-content">
-                    <span class="tile-img tile-img-bg"
-                        style="background-image: url(img/python.png); background-size: contain; background-position: center;"></span>
+                    <span class="tile-img"
+                        style="background-image: url(img/python.png);"></span>
                     <span class="tile-holder tile-holder-sm">
                         <span class="title">Python kurz</span>
                     </span>

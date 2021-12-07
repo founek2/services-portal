@@ -30,6 +30,7 @@ body {
   background-color: #f5f5f5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  margin: 0;
 }
 
 /* -- Google typography ------------------------------- */
@@ -1287,4 +1288,22 @@ body {
 .tile-disabled {
     filter: brightness(0.4);
     transition: filter 0.5s ease-in-out;
+}
+
+
+@media screen and (max-device-width: 1145px){
+  .tile-lg {
+  	width: 270px;
+  }
+}
+
+@media screen and (max-device-width: 849px){
+  .dashboard {
+  	width: 570px;
+  }
+}
+@media screen and (min-device-width: 850px) and (max-device-width: 1144px) {
+  .dashboard {
+  	width: 850px;
+  }
 }
