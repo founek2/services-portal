@@ -1295,6 +1295,11 @@ body {
   .tile-lg {
   	width: 270px;
   }
+
+  .title {
+  	font-size: 22px;
+	font-weight: 400;
+  }
 }
 
 @media screen and (max-device-width: 849px){
