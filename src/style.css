@@ -1289,7 +1289,10 @@ body {
     filter: brightness(0.4);
     transition: filter 0.5s ease-in-out;
 }
-
+.dashboard {
+    margin: 0 auto;
+    max-width: 1130px;
+}
 @media only screen and (max-width: 1145px) {
     .tile-lg {
         width: 270px;
