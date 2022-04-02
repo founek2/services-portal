@@ -8,7 +8,7 @@ $(document).ready(function () {
         var container = $('.display-animation');
         container.each(function () {
             var elements = $(this).children();
-	    elements.addClass("animated")
+            elements.addClass('animated');
         });
     })(jQuery);
 
@@ -62,13 +62,11 @@ $(document).ready(function () {
             mode: 'no-cors',
         })
             .then((res) => {
-                if ((res.status < 400 && res.status >= 200) || res.status === 0)
-                    internals.removeClass('tile-disabled');
+                if ((res.status < 400 && res.status >= 200) || res.status === 0) internals.removeClass('tile-disabled');
                 else internals.addClass('tile-disabled');
             })
             .catch((err) => {
-                if (err.name === 'TypeError')
-                    internals.removeClass('tile-disabled');
+                if (err.name === 'TypeError') internals.removeClass('tile-disabled');
                 else internals.addClass('tile-disabled');
             });
     }
