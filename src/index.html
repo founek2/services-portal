@@ -29,10 +29,7 @@
                     </span>
                 </span>
             </a>
-            <a
-                class="tile tile-lg tile-sqr tile-pink ripple-effect link-internal"
-                href="http://192.168.10.218:32400/web"
-            >
+            <a class="tile tile-lg tile-sqr tile-pink ripple-effect" href="https://plex.iotdomu.cz">
                 <span class="content-wrapper">
                     <span class="tile-content">
                         <span class="tile-img" style="background-image: url(img/plex-server.png)"></span>
@@ -245,39 +242,39 @@
         <script>
             function createPalette() {
                 const colors = [
-                    "red",
-                    "pink",
-                    "purple",
-                    "deep-purple",
-                    "indigo",
-                    "blue",
-                    "blue",
-                    "light-blue",
-                    "cyan",
-                    "teal",
-                    "green",
-                    "light-green",
-                    "lime",
-                    "yellow",
-                    "amber",
-                    "orange",
-                    "deep-orange",
-                    "brown",
+                    'red',
+                    'pink',
+                    'purple',
+                    'deep-purple',
+                    'indigo',
+                    'blue',
+                    'blue',
+                    'light-blue',
+                    'cyan',
+                    'teal',
+                    'green',
+                    'light-green',
+                    'lime',
+                    'yellow',
+                    'amber',
+                    'orange',
+                    'deep-orange',
+                    'brown',
                 ];
 
                 const nodes = colors.map((color) => {
-                    const el = document.createElement("div");
-                    el.style = "width: 30px; height: 10px;";
-                    el.classList.add(`tile-${color}`, "tooltip");
+                    const el = document.createElement('div');
+                    el.style = 'width: 30px; height: 10px;';
+                    el.classList.add(`tile-${color}`, 'tooltip');
                     el.title = color;
 
                     return el;
                 });
 
-                const palette = document.querySelector("#palette");
+                const palette = document.querySelector('#palette');
                 palette.append(...nodes);
             }
-            window.addEventListener("load", (event) => {
+            window.addEventListener('load', (event) => {
                 createPalette();
             });
         </script>
