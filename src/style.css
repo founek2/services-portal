@@ -182,6 +182,7 @@ body {
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
+    background-position: center;
 }
 .tile .content-wrapper .tile-content .tile-img.tile-img-sm {
     position: absolute;
