@@ -1305,11 +1305,36 @@ body {
     }
 }
 
-@media only screen and (max-width: 849px) {
+@media only screen and (max-width: 860px) {
+    .tile-lg {
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+        height: 230;
+    }
+    .tile-lg.tile-sqr  {
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+        height: 230;
+    }
+
+    .tile-lg .content-wrapper .tile-content .tile-img {
+        height: 130px;
+    }
+    .tile-lg .content-wrapper .tile-content {
+        height: 230;
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: 400;
+    }
+}
+
+/* @media only screen and (max-width: 849px) {
     .dashboard {
         width: 570px;
     }
-}
+} */
 @media only screen and (min-width: 850px) and (max-width: 1144px) {
     .dashboard {
         width: 850px;
