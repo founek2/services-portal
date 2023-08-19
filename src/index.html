@@ -1,335 +1,316 @@
 <html lang="cs">
-    <head>
-        <title>Služby rozcestník</title>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/png" href="img/favicon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="style.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="script.js"></script>
-    </head>
 
-    <body>
-        <!-- red,pink,purple,deep-purple,indigo,blue,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown -->
-        <div class="dashboard display-animation">
-            <a class="tile tile-lg tile-light-blue ripple-effect" href="https://nextcloud.iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span
-                            class="tile-img"
-                            style="
+<head>
+    <title>Služby rozcestník</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- red,pink,purple,deep-purple,indigo,blue,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown -->
+    <div class="dashboard display-animation">
+        <a class="tile tile-lg tile-light-blue ripple-effect" href="https://nextcloud.iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="
                                 background-image: url(img/nextcloud.png);
                                 filter: brightness(0) invert(100%) sepia(0%) saturate(0%) hue-rotate(42deg)
                                     brightness(98%) contrast(100%);
-                            "
-                        ></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Datové úložiště</span>
-                        </span>
+                            "></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Datové úložiště</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-pink ripple-effect" href="https://plex.iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/plex-server.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Streamovací služba</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-pink ripple-effect" href="https://plex.iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/plex-server.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Streamovací služba</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-cyan ripple-effect" href="https://bw.iotplatforma.cloud">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/passwordManager.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Správce hesel</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-cyan ripple-effect" href="https://bw.iotplatforma.cloud">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/passwordManager.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Správce hesel</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-indigo ripple-effect" href="https://iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span
-                            class="tile-img"
-                            style="
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-indigo ripple-effect" href="https://iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="
                                 background-image: url(img/iot.png);
                                 background-size: contain;
                                 background-position: center;
-                            "
-                        ></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">IoT Platformma</span>
-                        </span>
+                            "></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">IoT Platformma</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-deep-orange ripple-effect" href="https://docker.iotplatforma.cloud">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/portainerBig.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Správa kontejnerů</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-deep-orange ripple-effect" href="https://docker.iotplatforma.cloud">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/portainerBig.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Správa kontejnerů</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-amber ripple-effect link-internal" href="http://192.168.10.217:9091">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/transmission.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Torrent klient</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-amber ripple-effect link-internal" href="http://192.168.10.217:9091">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/transmission.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Torrent klient</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-red ripple-effect link-internal" href="http://192.168.10.217:8686">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/Lidarr.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Stahování hudby</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-red ripple-effect link-internal" href="http://192.168.10.217:8686">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/Lidarr.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Stahování hudby</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-cyan ripple-effect link-internal" href="http://192.168.10.217:8989">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/sonarr.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Stahování seriálů</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-cyan ripple-effect link-internal" href="http://192.168.10.217:8989">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/sonarr.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Stahování seriálů</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-light-green ripple-effect link-internal" href="http://192.168.10.217:7878">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/SonarrV3.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Stahování filmů</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-light-green ripple-effect link-internal" href="http://192.168.10.217:7878">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/SonarrV3.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Stahování filmů</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-brown ripple-effect" href="http://element.iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/element.svg)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Chatovací služba</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-brown ripple-effect" href="http://element.iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/element.svg)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Chatovací služba</span>
                     </span>
                 </span>
-            </a>
+            </span>
+        </a>
 
-            <a class="tile tile-lg tile-purple ripple-effect" href="https://python.iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/python.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Python kurz</span>
-                        </span>
+        <a class="tile tile-lg tile-purple ripple-effect" href="https://python.iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/python.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Python kurz</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-cyan ripple-effect" href="https://analytics.iotplatforma.cloud">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span
-                            class="tile-img"
-                            style="background-image: url(img/umami.svg); background-size: 60%"
-                        ></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Analytika webů</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-cyan ripple-effect" href="https://analytics.iotplatforma.cloud">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/umami.svg); background-size: 60%"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Analytika webů</span>
                     </span>
                 </span>
-            </a>
-            <a
-                class="tile tile-lg tile-sqr tile-indigo ripple-effect link-internal link-internal-test"
-                href="https://192.168.10.1"
-            >
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/edgeOS.jpeg)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Edge Router</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-indigo ripple-effect link-internal link-internal-test"
+            href="https://192.168.10.1">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/edgeOS.jpeg)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Edge Router</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-deep-orange ripple-effect link-internal" href="http://192.168.10.217">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/truenas.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Správa NAS</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-deep-orange ripple-effect link-internal" href="http://192.168.10.217">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/truenas.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Správa NAS</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-amber ripple-effect" href="https://jenkins.iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/jenkins2.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Mr. Jenkins</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-amber ripple-effect" href="https://jenkins.iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/jenkins2.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Mr. Jenkins</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-cyan ripple-effect link-internal" href="http://192.168.10.217:9696">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/prowlarr.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Torrent indexer</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-cyan ripple-effect link-internal" href="http://192.168.10.217:9696">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/prowlarr.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Torrent indexer</span>
                     </span>
                 </span>
-            </a>
-            <a
-                class="tile tile-lg tile-sqr tile-light-green ripple-effect link-internal"
-                href="http://192.168.10.116:9981"
-            >
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/tvhead.jpeg)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">DVBT server</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-light-green ripple-effect link-internal" href="http://192.168.10.116:9981">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/tvhead.jpeg)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">DVBT server</span>
                     </span>
                 </span>
-            </a>
-            <a
-                class="tile tile-lg tile-sqr tile-orange ripple-effect link-internal"
-                href="http://192.168.10.116:34400/web/"
-            >
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/xteve.jpeg)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">DVBT proxy</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-orange ripple-effect link-internal"
+            href="http://192.168.10.116:34400/web/">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/xteve.jpeg)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">DVBT proxy</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-purple ripple-effect" href="https://akaunting.iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/crater.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Účetnictví</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-purple ripple-effect" href="https://akaunting.iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/crater.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Účetnictví</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-pink ripple-effect" href="https://docker-registry.iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span
-                            class="tile-img"
-                            style="background-image: url(img/container-crane.png); filter: invert(0.8)"
-                        ></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Docker registr</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-pink ripple-effect" href="https://docker-registry.iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img"
+                        style="background-image: url(img/container-crane.png); filter: invert(0.8)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Docker registr</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-brown ripple-effect" href="https://grafana.iotdomu.cz">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/grafana.svg)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Grafíky</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-brown ripple-effect" href="https://grafana.iotdomu.cz">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/grafana.svg)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Grafíky</span>
                     </span>
                 </span>
-            </a>
-            <a
-                class="tile tile-lg tile-sqr tile-light-blue ripple-effect link-internal"
-                href="http://192.168.10.88:9027"
-            >
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/beaver.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">DB admin</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-light-blue ripple-effect link-internal" href="http://192.168.10.88:9027">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/beaver.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">DB admin</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-green ripple-effect" href="https://monitoring.iotdomu.cz/status/main">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/monitoring.png)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Monitoring</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-green ripple-effect" href="https://monitoring.iotdomu.cz/status/main">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/monitoring.png)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Monitoring</span>
                     </span>
                 </span>
-            </a>
-            <a class="tile tile-lg tile-sqr tile-teal ripple-effect link-internal" href="https://192.168.10.217:8444">
-                <span class="content-wrapper">
-                    <span class="tile-content">
-                        <span class="tile-img" style="background-image: url(img/unifi.svg)"></span>
-                        <span class="tile-holder tile-holder-sm">
-                            <span class="title">Wifi controller</span>
-                        </span>
+            </span>
+        </a>
+        <a class="tile tile-lg tile-sqr tile-teal ripple-effect link-internal" href="https://192.168.10.217:8444">
+            <span class="content-wrapper">
+                <span class="tile-content">
+                    <span class="tile-img" style="background-image: url(img/unifi.svg)"></span>
+                    <span class="tile-holder tile-holder-sm">
+                        <span class="title">Wifi controller</span>
                     </span>
                 </span>
-            </a>
-        </div>
+            </span>
+        </a>
+    </div>
 
-        <!-- <div class="dashboard"> -->
-        <div id="palette" style="display: flex; justify-content: space-between" class="dashboard"></div>
-        <!-- </div> -->
+    <!-- <div class="dashboard"> -->
+    <div id="palette" style="display: flex; justify-content: space-between" class="dashboard"></div>
+    <!-- </div> -->
 
-        <!-- red,pink,purple,deep-purple,indigo,blue,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown -->
-        <script>
-            function createPalette() {
-                const colors = [
-                    'red',
-                    'pink',
-                    'purple',
-                    'deep-purple',
-                    'indigo',
-                    'blue',
-                    'blue',
-                    'light-blue',
-                    'cyan',
-                    'teal',
-                    'green',
-                    'light-green',
-                    'lime',
-                    'yellow',
-                    'amber',
-                    'orange',
-                    'deep-orange',
-                    'brown',
-                ];
+    <!-- red,pink,purple,deep-purple,indigo,blue,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown -->
+    <script>
+        function createPalette() {
+            const colors = [
+                'red',
+                'pink',
+                'purple',
+                'deep-purple',
+                'indigo',
+                'blue',
+                'blue',
+                'light-blue',
+                'cyan',
+                'teal',
+                'green',
+                'light-green',
+                'lime',
+                'yellow',
+                'amber',
+                'orange',
+                'deep-orange',
+                'brown',
+            ];
 
-                const nodes = colors.map((color) => {
-                    const el = document.createElement('div');
-                    el.style = 'width: 30px; height: 10px;';
-                    el.classList.add(`tile-${color}`, 'tooltip');
-                    el.title = color;
+            const nodes = colors.map((color) => {
+                const el = document.createElement('div');
+                el.style = 'width: 30px; height: 10px;';
+                el.classList.add(`tile-${color}`, 'tooltip');
+                el.title = color;
 
-                    return el;
-                });
-
-                const palette = document.querySelector('#palette');
-                palette.append(...nodes);
-            }
-            window.addEventListener('load', (event) => {
-                createPalette();
+                return el;
             });
-        </script>
-    </body>
+
+            const palette = document.querySelector('#palette');
+            palette.append(...nodes);
+        }
+        window.addEventListener('load', (event) => {
+            createPalette();
+        });
+    </script>
+</body>
+
 </html>
